@@ -37,4 +37,7 @@ var n2 = NUMBER_2;
 var file2 = "__FILE__";
 
 // Include another file
-#include "test/ressources/file-to-include.js"`);
+#include "test/ressources/file-to-include.js"
+#include <test/ressources/file-to-include.js>
+
+`);
