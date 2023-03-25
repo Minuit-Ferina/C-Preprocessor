@@ -125,7 +125,7 @@ c.on('error', function(err) {
 });
 
 c.on('success', function(code) {
-	fs.writeFile(outputFile, code, function(err) {
+	fs.writeFile(outputFile, code.code, function(err) {
 
 		if (err)
 			return error(`Unable to write the output file "${outputFile}"`);

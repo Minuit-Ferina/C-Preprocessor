@@ -40,4 +40,7 @@ var file2 = "__FILE__";
 #include "test/ressources/file-to-include.js"
 #include <test/ressources/file-to-include.js>
 
+#include <test/ressources/file-to-include1.js>
+#include <test/ressources/file-to-include2.js>
+#include <test/ressources/file-to-include2.js"
 `);

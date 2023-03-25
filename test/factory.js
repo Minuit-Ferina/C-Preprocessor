@@ -83,7 +83,7 @@ Test.prototype.run = function(code) {
 		// Run the code
 		try {
 			var sandbox = {};
-			vm.runInNewContext(code, sandbox);
+			vm.runInNewContext(code.code, sandbox);
 		} catch(e) {
 			return _this.error(`code execution failed -> ${e.message}`);
 		}
@@ -100,7 +100,7 @@ Test.prototype.run = function(code) {
 
 
 		// All is OK: log the success
-		_this.success();
+		_this.success(code);
 	}
 
 

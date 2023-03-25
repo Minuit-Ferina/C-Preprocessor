@@ -39,7 +39,13 @@ test.error = function(err) {
 
 // Override success function
 test.success = function(err) {
-	error.call(test, 'no error raised');
+	if(err.errors.length > 0)
+		if(err.errors[0].message === text)
+			success.call(test);
+		else
+			error.call(test, "we didn't get the right message");
+	else
+		error.call(test, 'no error raised');
 };
 
 

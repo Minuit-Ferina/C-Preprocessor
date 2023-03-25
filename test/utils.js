@@ -17,7 +17,9 @@ var factory = require('./factory.js');
 
 // Create a test
 exports.test = function(name) {
-	return new factory.Test(name);
+	let f = new factory.Test(name);
+	f.setting("stopOnError", false);
+	return f;
 };
 
 
